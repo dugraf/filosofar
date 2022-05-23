@@ -1,0 +1,401 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-shadow: 0.7px 0.7px 0.7px black;
+
+}
+
+:root
+{
+    --font0: 'Cheque-Regular';
+    --font1: 'Cheque-Black';
+    --font2: 'Montserrat', sans-serif;
+    --font3:'Roboto Slab', serif;
+    --font4: 'Montserrat', sans-serif;
+
+    --cor0: #2E1540;
+    --cor1: #DCAC02;
+    --cor2: #222327;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: var(--cor2);
+}
+
+header h1
+{
+    text-align: center;
+    font-family: var(--font1);
+    font-weight: bold;
+    font-size: 3.8em;
+
+    color: var(--cor1);
+    padding: 50px 0px 30px 0px;
+    margin: 0px;
+}
+
+header
+{
+    background-image: url('../img/painel-filo.png');
+    background-color: var(--cor0);
+    background-repeat: no-repeat;
+    margin: 0px;
+    text-align: center;
+}
+
+nav
+{
+    text-align: center;
+    background-color: var(--cor0);
+}
+
+nav li
+{
+    display: inline-block;
+    color: white;
+    font-size: 2em;
+
+    padding: 0px 20px;
+}
+
+nav li a:hover
+{
+    color: #222327;
+}
+
+nav p.efeito
+{
+    display: none;
+}
+
+nav p.efeito:hover
+{
+    display: block;
+}
+
+nav div#assine
+{
+    background-color: var(--cor1);
+    width: 25%;
+    margin: 15px auto auto auto;
+    padding: 5px 5px;
+    font-family: var(--font2);
+    font-size: 2em;
+    border-radius: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+nav div#assine:hover
+{
+    width: 100%;
+}
+
+nav div#assine a
+{
+    text-decoration: none;
+    color: var(--cor0);
+}
+
+nav div#assine a:hover
+{
+    color: var(--cor2);
+}
+
+section
+{
+    line-height: 50px;
+    font-size: 2em;
+    font-family: var(--font1);
+    color:  white;
+
+    padding: 3vh 0px 3vh 0px;
+}
+
+section p
+{
+    padding: 20px 50px;
+    margin: 0px 30px;
+}
+
+section p
+{
+    padding: 70px 50px;
+    margin: 0px 30px;
+}
+
+section.img > p
+{
+    background-color: rgba(0, 0, 0, 0.466);
+    display: inline-block;
+    padding: 0px 0px;
+    text-shadow: 5px 6px 10px black;
+    margin: 0px 90px;
+    
+}
+
+section.normal
+{
+    color: white;
+    background-color: var(--cor2);
+    text-shadow: 4px 2px 7px black;
+    
+}
+
+section.img
+{
+    padding: 90px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 2px 2px 20px 0px black;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+section#img1
+{
+    background-image: url('../img/arvore.png');
+    background-position: right bottom;
+}
+
+section#img2
+{
+    background-image: url('../img/apple.jpg');
+    background-position: right top;
+}
+
+section#img3
+{
+    background-image: url('../img/borboleta.jpg');
+    background-position: right center;
+}
+
+section.info
+{
+    font-family: var(--font4);
+    font-size: 1.3em;
+}
+
+section.info h2
+{
+    font-family: var(--font2);
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    margin: 0px;
+    color: var(--cor1);
+    padding: 10px 0px;
+}
+
+section > p.txt
+{
+    padding: 20px;
+    margin: 0px 90px;
+}
+
+section.info h3
+{
+    font-family: var(--font2);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0px;
+    color: var(--cor1);
+    padding: 40px 0px;
+}
+
+.container_desenhos
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box_desenhos
+{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #DCAC02;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box_desenhos h4
+{
+    color: #DCAC02;
+    font-size: 0.9em;
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    z-index: 1;
+    padding-top: 15px;
+    left: -150%;
+    transition: .5s ease-in-out;
+    text-shadow: 0.5px 0.5px 0.5px black;
+    text-align: center;
+    line-height: normal;
+}
+
+.box_desenhos:hover h4
+{
+    transform: translateX(150%);
+}
+
+.box_desenhos img
+{
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top: 15%;
+
+    font-size: 10rem;
+    transition: .5s ease-in-out;
+}
+
+.box_desenhos:hover img
+{
+    transform: translate(50px, 50px);
+    box-shadow: 2px 2px 4px black;
+    filter: blur(8px);
+}
+
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container a
+{
+    text-decoration: none;
+}
+
+.box
+{
+    width: 216.5px;
+    height: 288.5px;
+    border: 1px solid #DCAC02;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 10px;
+    padding: 15px 20px;
+    position: relative;
+    overflow: hidden;
+    line-height: normal;
+}
+
+.box h4
+{
+    color: #DCAC02;
+    font-size: 1em;
+}
+
+.box img
+{
+    width: 216.5px;
+    height: 288.5px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    transition: .5s ease-in-out;
+}
+
+.box:hover img
+{
+    transform: translate(-90px, -90px);
+    box-shadow: 2px 2px 4px black;
+    filter: blur(8px);
+}
+
+.box .content
+{
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    z-index: 1;
+    top: 0px;
+    left: -150%;
+    transition: .5s ease-in-out;
+    padding: 30px 2px;
+    text-shadow: 0.7px 0.7px 0.7px black;
+    text-align: justify;
+}
+
+.box:hover .content
+{
+    transform: translateX(150%);
+}
+
+.box .content p
+{
+    color: #DCAC02;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    padding: 2px;
+    margin: 0px;
+}
+
+p.mark
+{
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+footer
+{
+    background-color: var(--cor0);
+    font-family: var(--font4);
+    color: white;
+
+    padding: 20px 0px;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+    transition: .9s;
+}
+
+footer a:hover
+{
+    color: var(--cor1);
+    transition: .9s;
+}
+
+footer div#pae
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer div
+{
+    text-align: center;
+    padding: 0px 40px;
+}
